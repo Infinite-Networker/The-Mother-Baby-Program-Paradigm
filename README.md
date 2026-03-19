@@ -74,3 +74,5 @@ Traditional software architectures often lack organic responsiveness. The Mother
 │ │ Reporting │ │ │ │ Reporting │ │ │ │ Reporting │ │
 │ └───────────────┘ │ │ └───────────────┘ │ │ └───────────────┘ │
 └─────────────────────┘ └─────────────────────┘ └─────────────────────┘
+
+Created by Cherry Computer Ltd.
