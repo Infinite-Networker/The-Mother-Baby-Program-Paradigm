@@ -13,7 +13,7 @@ The Mother-Baby Program Paradigm draws inspiration from biological relationships
 - **Mother Program**: The intelligent core/controller that spawns, manages, and learns from Baby Programs
 - **Baby Programs**: Modular, specialized units capable of evolving, learning, and adapting to specific tasks
 
-Created by Dr. Ahmad M. Ishanzai, this paradigm offers a fresh approach to building intelligent, autonomous, and scalable software systems.
+Created by Dr. Ahmad M. Ishanzai & Cherry Computer Ltd., this paradigm offers a fresh approach to building intelligent, autonomous, and scalable software systems.
 
 ## 📚 Table of Contents
 
