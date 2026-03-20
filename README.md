@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/Infinite-Networker/The-Mother-Baby-Program-Paradigm/blob/871885bf5cb1f34485cd26e82172bba5a2a3b013/.img" 
+<img src="https://github.com/Infinite-Networker/The-Mother-Baby-Program-Paradigm/blob/8b0dc65cd8b76612d19f39faecdb612be2dcb5ad/.img" 
 width="320"/>
 
 
