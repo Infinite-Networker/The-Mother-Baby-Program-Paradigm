@@ -1,10 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/Infinite-Networker/The-Mother-Baby-Program-Paradigm/main/.img" width="320"/>
-
 # 🍒 The Mother-Baby Program Paradigm
-
-
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
