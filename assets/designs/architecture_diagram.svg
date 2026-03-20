@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Mother-Baby Program Paradigm — Architecture Diagram (SVG)
+  Created by: Cherry Computer Ltd.
+  License: MIT
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" width="960" height="720"
+     font-family="'Segoe UI', Arial, sans-serif">
+
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0a0a1a"/>
+      <stop offset="100%" stop-color="#101028"/>
+    </linearGradient>
+    <linearGradient id="motherGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1a1a4a"/>
+      <stop offset="100%" stop-color="#0d0d30"/>
+    </linearGradient>
+    <linearGradient id="babyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1a2a1a"/>
+      <stop offset="100%" stop-color="#0d1a0d"/>
+    </linearGradient>
+    <linearGradient id="busGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#2a1a00"/>
+      <stop offset="100%" stop-color="#1a0d00"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7ba3ff"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7bffb0"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="720" fill="url(#bgGrad)"/>
+
+  <!-- Title Banner -->
+  <rect x="20" y="14" width="920" height="52" rx="8" fill="#1a1a4a" stroke="#5566cc" stroke-width="1.5"/>
+  <text x="480" y="34" text-anchor="middle" fill="#aabbff" font-size="11" letter-spacing="3">
+    CHERRY COMPUTER LTD.
+  </text>
+  <text x="480" y="56" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="bold" letter-spacing="1">
+    THE MOTHER-BABY PROGRAM PARADIGM — ARCHITECTURE
+  </text>
+
+  <!-- ══ MOTHER PROGRAM BOX ══ -->
+  <rect x="20" y="82" width="920" height="220" rx="10" fill="url(#motherGrad)"
+        stroke="#5566cc" stroke-width="1.8"/>
+  <text x="480" y="102" text-anchor="middle" fill="#aabbff" font-size="11"
+        letter-spacing="3" font-weight="bold">MOTHER PROGRAM LAYER</text>
+
+  <!-- MotherProgram Core -->
+  <rect x="300" y="110" width="360" height="90" rx="7" fill="#2a2a6a" stroke="#7788ff" stroke-width="1.5"/>
+  <text x="480" y="131" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">MotherProgram (Core)</text>
+  <text x="480" y="150" text-anchor="middle" fill="#aabbff" font-size="10">spawn_baby()   terminate_baby()   restart_baby()</text>
+  <text x="480" y="167" text-anchor="middle" fill="#aabbff" font-size="10">broadcast()   send_to_baby()   get_status()</text>
+  <text x="480" y="184" text-anchor="middle" fill="#aabbff" font-size="10">on_baby_born()   on_baby_died()   on_evolution()</text>
+
+  <!-- Sub-modules -->
+  <!-- Spawner -->
+  <rect x="30" y="110" width="150" height="80" rx="6" fill="#1e1e55" stroke="#5566cc" stroke-width="1.2"/>
+  <text x="105" y="130" text-anchor="middle" fill="#aabbff" font-size="11" font-weight="bold">Spawner</text>
+  <text x="105" y="148" text-anchor="middle" fill="#8899dd" font-size="9.5">FixedPoolPolicy</text>
+  <text x="105" y="163" text-anchor="middle" fill="#8899dd" font-size="9.5">LoadBasedPolicy</text>
+  <text x="105" y="178" text-anchor="middle" fill="#8899dd" font-size="9.5">evaluate_and_spawn()</text>
+
+  <!-- Evaluator -->
+  <rect x="195" y="110" width="90" height="80" rx="6" fill="#1e1e55" stroke="#5566cc" stroke-width="1.2"/>
+  <text x="240" y="130" text-anchor="middle" fill="#aabbff" font-size="11" font-weight="bold">Evaluator</text>
+  <text x="240" y="148" text-anchor="middle" fill="#8899dd" font-size="9">Scoring</text>
+  <text x="240" y="163" text-anchor="middle" fill="#8899dd" font-size="9">Grading</text>
+  <text x="240" y="178" text-anchor="middle" fill="#8899dd" font-size="9">Recommend</text>
+
+  <!-- Supervisor -->
+  <rect x="672" y="110" width="110" height="80" rx="6" fill="#1e1e55" stroke="#5566cc" stroke-width="1.2"/>
+  <text x="727" y="130" text-anchor="middle" fill="#aabbff" font-size="11" font-weight="bold">Supervisor</text>
+  <text x="727" y="148" text-anchor="middle" fill="#8899dd" font-size="9">HealthChecks</text>
+  <text x="727" y="163" text-anchor="middle" fill="#8899dd" font-size="9">AutoRestart</text>
+  <text x="727" y="178" text-anchor="middle" fill="#8899dd" font-size="9">StateMonitor</text>
+
+  <!-- LifecycleManager -->
+  <rect x="796" y="110" width="140" height="80" rx="6" fill="#1e1e55" stroke="#5566cc" stroke-width="1.2"/>
+  <text x="866" y="130" text-anchor="middle" fill="#aabbff" font-size="11" font-weight="bold">LifecycleManager</text>
+  <text x="866" y="148" text-anchor="middle" fill="#8899dd" font-size="9">HealthMonitor</text>
+  <text x="866" y="163" text-anchor="middle" fill="#8899dd" font-size="9">EvolutionCycle</text>
+  <text x="866" y="178" text-anchor="middle" fill="#8899dd" font-size="9">Pause / Resume</text>
+
+  <!-- Mother state machine pill -->
+  <rect x="30" y="210" width="900" height="82" rx="6" fill="#14143a" stroke="#3344aa" stroke-width="1"/>
+  <text x="40" y="227" fill="#8899cc" font-size="9.5" font-weight="bold" letter-spacing="2">MOTHER STATES:</text>
+  <!-- States -->
+  <rect x="130" y="215" width="98" height="22" rx="11" fill="#2a2a5a" stroke="#5566cc" stroke-width="1"/>
+  <text x="179" y="230" text-anchor="middle" fill="#aabbff" font-size="9.5">INITIALIZING</text>
+  <rect x="242" y="215" width="70" height="22" rx="11" fill="#1a4a1a" stroke="#55cc66" stroke-width="1"/>
+  <text x="277" y="230" text-anchor="middle" fill="#aaffbb" font-size="9.5">ACTIVE</text>
+  <rect x="326" y="215" width="60" height="22" rx="11" fill="#4a3a00" stroke="#cc9922" stroke-width="1"/>
+  <text x="356" y="230" text-anchor="middle" fill="#ffdd88" font-size="9.5">PAUSED</text>
+  <rect x="400" y="215" width="70" height="22" rx="11" fill="#1a2a4a" stroke="#4477cc" stroke-width="1"/>
+  <text x="435" y="230" text-anchor="middle" fill="#88bbff" font-size="9.5">EVOLVING</text>
+  <rect x="484" y="215" width="108" height="22" rx="11" fill="#3a1a00" stroke="#cc6622" stroke-width="1"/>
+  <text x="538" y="230" text-anchor="middle" fill="#ffaa66" font-size="9.5">SHUTTING DOWN</text>
+  <rect x="606" y="215" width="88" height="22" rx="11" fill="#3a0a0a" stroke="#cc3333" stroke-width="1"/>
+  <text x="650" y="230" text-anchor="middle" fill="#ffaaaa" font-size="9.5">TERMINATED</text>
+  <!-- Arrow transitions -->
+  <line x1="228" y1="226" x2="242" y2="226" stroke="#7ba3ff" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="312" y1="226" x2="326" y2="226" stroke="#7ba3ff" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="386" y1="226" x2="400" y2="226" stroke="#7ba3ff" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="470" y1="226" x2="484" y2="226" stroke="#7ba3ff" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="592" y1="226" x2="606" y2="226" stroke="#7ba3ff" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <!-- Baby states -->
+  <text x="40" y="272" fill="#8899cc" font-size="9.5" font-weight="bold" letter-spacing="2">BABY STATES:</text>
+  <rect x="130" y="258" width="50" height="22" rx="11" fill="#2a2a5a" stroke="#5566cc" stroke-width="1"/>
+  <text x="155" y="273" text-anchor="middle" fill="#aabbff" font-size="9.5">BORN</text>
+  <rect x="194" y="258" width="60" height="22" rx="11" fill="#1a4a1a" stroke="#55cc66" stroke-width="1"/>
+  <text x="224" y="273" text-anchor="middle" fill="#aaffbb" font-size="9.5">ACTIVE</text>
+  <rect x="268" y="258" width="88" height="22" rx="11" fill="#1a3a1a" stroke="#44aa55" stroke-width="1"/>
+  <text x="312" y="273" text-anchor="middle" fill="#88dd99" font-size="9.5">PROCESSING</text>
+  <rect x="370" y="258" width="68" height="22" rx="11" fill="#1a2a3a" stroke="#4488aa" stroke-width="1"/>
+  <text x="404" y="273" text-anchor="middle" fill="#88ccff" font-size="9.5">RESTING</text>
+  <rect x="452" y="258" width="70" height="22" rx="11" fill="#1a2a4a" stroke="#4477cc" stroke-width="1"/>
+  <text x="487" y="273" text-anchor="middle" fill="#88bbff" font-size="9.5">EVOLVING</text>
+  <rect x="536" y="258" width="68" height="22" rx="11" fill="#4a1a00" stroke="#cc4400" stroke-width="1"/>
+  <text x="570" y="273" text-anchor="middle" fill="#ffaa66" font-size="9.5">CRASHED</text>
+  <rect x="618" y="258" width="88" height="22" rx="11" fill="#3a0a0a" stroke="#cc3333" stroke-width="1"/>
+  <text x="662" y="273" text-anchor="middle" fill="#ffaaaa" font-size="9.5">TERMINATED</text>
+
+  <!-- ══ MESSAGE BUS ══ -->
+  <rect x="300" y="318" width="360" height="62" rx="8" fill="url(#busGrad)"
+        stroke="#ffaa33" stroke-width="1.8" filter="url(#glow)"/>
+  <text x="480" y="341" text-anchor="middle" fill="#ffcc66" font-size="12" font-weight="bold">MESSAGE BUS</text>
+  <text x="480" y="360" text-anchor="middle" fill="#ddaa44" font-size="10">publish() · subscribe() · publish_direct() · get_history()</text>
+
+  <!-- Connector: Mother → Bus -->
+  <line x1="480" y1="302" x2="480" y2="318" stroke="#7ba3ff" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="490" y="313" fill="#7ba3ff" font-size="9">spawn / broadcast</text>
+
+  <!-- ══ BABY PROGRAM LAYER ══ -->
+  <!-- WorkerBaby -->
+  <rect x="20" y="400" width="200" height="130" rx="8" fill="url(#babyGrad)" stroke="#55cc77" stroke-width="1.5"/>
+  <text x="120" y="422" text-anchor="middle" fill="#88ffaa" font-size="12" font-weight="bold">WorkerBaby</text>
+  <text x="120" y="440" text-anchor="middle" fill="#77cc88" font-size="9.5">execute(task_data)</text>
+  <text x="120" y="455" text-anchor="middle" fill="#77cc88" font-size="9.5">Custom handler fn</text>
+  <text x="120" y="470" text-anchor="middle" fill="#77cc88" font-size="9.5">get_results()</text>
+  <text x="120" y="485" text-anchor="middle" fill="#77cc88" font-size="9.5">report_metrics()</text>
+  <text x="120" y="500" text-anchor="middle" fill="#559966" font-size="9">CPU-bound batch tasks</text>
+  <text x="120" y="515" text-anchor="middle" fill="#559966" font-size="9">Data transformation pipelines</text>
+
+  <!-- AIBaby -->
+  <rect x="380" y="400" width="200" height="130" rx="8" fill="url(#babyGrad)" stroke="#55cc77" stroke-width="1.5"/>
+  <text x="480" y="422" text-anchor="middle" fill="#88ffaa" font-size="12" font-weight="bold">AIBaby</text>
+  <text x="480" y="440" text-anchor="middle" fill="#77cc88" font-size="9.5">execute() + evolve()</text>
+  <text x="480" y="455" text-anchor="middle" fill="#77cc88" font-size="9.5">Confidence scoring</text>
+  <text x="480" y="470" text-anchor="middle" fill="#77cc88" font-size="9.5">Pattern memory</text>
+  <text x="480" y="485" text-anchor="middle" fill="#77cc88" font-size="9.5">Adaptive learning rate</text>
+  <text x="480" y="500" text-anchor="middle" fill="#559966" font-size="9">AI inference &amp; classification</text>
+  <text x="480" y="515" text-anchor="middle" fill="#559966" font-size="9">Self-improving over time</text>
+
+  <!-- SensorBaby -->
+  <rect x="740" y="400" width="200" height="130" rx="8" fill="url(#babyGrad)" stroke="#55cc77" stroke-width="1.5"/>
+  <text x="840" y="422" text-anchor="middle" fill="#88ffaa" font-size="12" font-weight="bold">SensorBaby</text>
+  <text x="840" y="440" text-anchor="middle" fill="#77cc88" font-size="9.5">_sample_loop() autonomous</text>
+  <text x="840" y="455" text-anchor="middle" fill="#77cc88" font-size="9.5">Configurable sensor_fn</text>
+  <text x="840" y="470" text-anchor="middle" fill="#77cc88" font-size="9.5">Alert threshold</text>
+  <text x="840" y="485" text-anchor="middle" fill="#77cc88" font-size="9.5">get_readings() / avg</text>
+  <text x="840" y="500" text-anchor="middle" fill="#559966" font-size="9">IoT &amp; real-time monitoring</text>
+  <text x="840" y="515" text-anchor="middle" fill="#559966" font-size="9">Continuous data streaming</text>
+
+  <!-- Connectors: Bus → Babies -->
+  <line x1="380" y1="349" x2="120" y2="400" stroke="#7bffb0" stroke-width="1.5" marker-end="url(#arrow-green)" stroke-dasharray="6,3"/>
+  <line x1="480" y1="380" x2="480" y2="400" stroke="#7bffb0" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <line x1="580" y1="349" x2="840" y2="400" stroke="#7bffb0" stroke-width="1.5" marker-end="url(#arrow-green)" stroke-dasharray="6,3"/>
+
+  <!-- ══ BabyProgram Abstract Base ══ -->
+  <rect x="20" y="548" width="920" height="70" rx="8" fill="#101022" stroke="#3344aa" stroke-width="1.5"/>
+  <text x="480" y="570" text-anchor="middle" fill="#8899cc" font-size="11" font-weight="bold"
+        letter-spacing="1">BabyProgram (Abstract Base Class)</text>
+  <text x="480" y="588" text-anchor="middle" fill="#6677aa" font-size="9.5">
+    id · state · health_score · learned_data · task_count · error_count
+  </text>
+  <text x="480" y="605" text-anchor="middle" fill="#6677aa" font-size="9.5">
+    start() · stop() · submit_task() · on_message() · report_metrics() · evolve() · on_born() · on_terminated()
+  </text>
+
+  <!-- Connectors: Babies → Base -->
+  <line x1="120" y1="530" x2="120" y2="548" stroke="#5566aa" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="480" y1="530" x2="480" y2="548" stroke="#5566aa" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="840" y1="530" x2="840" y2="548" stroke="#5566aa" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="250" y="542" fill="#5566aa" font-size="8" font-style="italic">extends</text>
+  <text x="495" y="542" fill="#5566aa" font-size="8" font-style="italic">extends</text>
+  <text x="665" y="542" fill="#5566aa" font-size="8" font-style="italic">extends</text>
+
+  <!-- Footer -->
+  <rect x="20" y="634" width="920" height="72" rx="8" fill="#0c0c22" stroke="#2233aa" stroke-width="1"/>
+  <text x="480" y="654" text-anchor="middle" fill="#5566aa" font-size="9" letter-spacing="2">DATA FLOW</text>
+  <text x="480" y="672" text-anchor="middle" fill="#6677aa" font-size="9">
+    ① spawn_baby → ② submit_task / broadcast → ③ execute() → ④ publish result via MessageBus
+  </text>
+  <text x="480" y="690" text-anchor="middle" fill="#6677aa" font-size="9">
+    ⑤ LifecycleManager health checks → ⑥ Evaluator scores → ⑦ Mother: keep / restart / terminate → ⑧ evolve()
+  </text>
+  <text x="480" y="708" text-anchor="middle" fill="#445599" font-size="8.5">
+    © 2024 Cherry Computer Ltd. · MIT License · github.com/Infinite-Networker/The-Mother-Baby-Program-Paradigm
+  </text>
+
+</svg>
