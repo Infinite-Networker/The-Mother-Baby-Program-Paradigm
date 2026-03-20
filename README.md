@@ -2,7 +2,7 @@
 
 <!--Banner--> 
 <img src="https://github.com/Infinite-Networker/The-Mother-Baby-Program-Paradigm/blob/3792207d32f3c2d1ec566cb474efa1ba84b455ac/.img" 
-alt="The Mother-Baby Program Paradigm Banner" width="320"/>
+width="320"/>
 
 <br/>
 
