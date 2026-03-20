@@ -1,8 +1,7 @@
 <div align="center">
 
-<!--Banner--> 
-<img src="https://github.com/Infinite-Networker/The-Mother-Baby-Program-Paradigm/blob/3792207d32f3c2d1ec566cb474efa1ba84b455ac/.img" 
-width="320"/>
+<!-- Banner -->
+<img src="https://github.com/Infinite-Networker/The-Mother-Baby-Program-Paradigm/blob/871885bf5cb1f34485cd26e82172bba5a2a3b013/.img)" alt="CherryScript Banner" width="320"/>
 
 <br/>
 
