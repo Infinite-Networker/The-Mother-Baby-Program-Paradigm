@@ -1,8 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/Infinite-Networker/The-Mother-Baby-Program-Paradigm/blob/8b0dc65cd8b76612d19f39faecdb612be2dcb5ad/.img" 
-width="320"/>
-
+<img src="https://raw.githubusercontent.com/Infinite-Networker/The-Mother-Baby-Program-Paradigm/main/.img" width="320"/>
 
 # 🍒 The Mother-Baby Program Paradigm
 
