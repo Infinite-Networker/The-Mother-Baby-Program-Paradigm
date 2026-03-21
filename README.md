@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src=https://github.com/Infinite-Networker/The-Mother-Baby-Program-Paradigm/blob/fc141aed303d696730a18e712798b9b3806a446a/%20The%20Official%20Mother-Baby%20Program%20Paradigm%20Logo.png alt="The Mother-Baby Prgram Prardigm Logo" width="350"/>
+
 # 🍒 The Mother-Baby Program Paradigm
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
